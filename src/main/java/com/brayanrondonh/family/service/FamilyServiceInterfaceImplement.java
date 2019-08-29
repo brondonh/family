@@ -23,6 +23,21 @@ public class FamilyServiceInterfaceImplement implements FamilyServiceInterface
         return dao.findAll();
     }
 
+    public List<Family> findByfirstName(String firstName)
+    {
+        return dao.findByfirstName(firstName);
+    }
+
+    public List<Family> findBydni(String dni)
+    {
+        return dao.findBydni(dni);
+    }
+
+    public List<Family> findByemail(String email)
+    {
+        return dao.findByemail(email);
+    }
+
     public void updateFamily(Family family)
     {
         dao.save(family);

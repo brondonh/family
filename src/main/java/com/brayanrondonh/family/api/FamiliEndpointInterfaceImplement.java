@@ -26,6 +26,24 @@ public class FamiliEndpointInterfaceImplement
         return familyServInter.findAllFamily();
     }
 
+    @GetMapping(value = "/name/{name}")
+    public List<Family> findFirstName(@PathVariable("name") String firstName)
+    {
+        return familyServInter.findByfirstName(firstName);
+    }
+
+    @GetMapping(value = "/dni/{dni}")
+    public List<Family> findDni(@PathVariable("dni") String dni)
+    {
+        return familyServInter.findBydni(dni);
+    }
+
+    @GetMapping(value = "/email/{email}")
+    public List<Family> findEmail(@PathVariable("email") String email)
+    {
+        return familyServInter.findByemail(email);
+    }
+
     @PutMapping
     public void update(@RequestBody Family family)
     {
